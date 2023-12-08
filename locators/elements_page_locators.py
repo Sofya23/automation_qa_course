@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 class TextBoxPageLocators:
     FULL_NAME = (By.XPATH, '//input[@placeholder="Full Name"]')
     EMAIL = (By.XPATH, '//input[@placeholder="name@example.com"]')
