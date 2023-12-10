@@ -1,5 +1,5 @@
 import time
-from pages.elements_page import TextBoxPage
+from pages.elements_page import TextBoxPage, CheckPoxPage
 from conftest import driver
 
 
@@ -16,5 +16,12 @@ class TestElement:
             assert current_address == output_cur_add, "the current_address does not match"
             assert permanent_address == output_per_addr, "the permanent_address does not match"
 
+            time.sleep(10)
 
+    class TestCheckBox:
+        def test_check_box(self, driver):
+            check_box_page = CheckPoxPage(driver, 'https://demoqa.com/checkbox')
+            check_box_page.open()
+            check_box_page.open_full_list()
+            check_box_page.click_random_checkbox()
             time.sleep(10)
